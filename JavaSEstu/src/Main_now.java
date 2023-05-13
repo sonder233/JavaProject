@@ -5,9 +5,16 @@ import static java.lang.Math.pow;
 
 public class Main_now {
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        // 注意 hasNext 和 hasNextLine 的区别
+        while (in.hasNext()) { // 注意 while 处理多个 case
+            String str = in.next();
 
-
+        }
     }
+
+
+
 
     
 
@@ -32,8 +39,25 @@ public class Main_now {
                     }
                 }
             }
+
+            //给结果数组排序
+            boolean sorted = false;//尚未有序
+            while (!sorted){
+                sorted = true;//假设有序
+                for (int i = 1; i < count; i++) {
+                    if (numbers[i-1][0] > numbers[i][0]){
+                        //则交换
+                        int[] temp = numbers[i-1];
+                        numbers[i-1] = numbers[i];
+                        numbers[i] =  temp;
+                        sorted = false;
+                    }
+                }
+            }
+
+
             for (int i = 0; i < count; i++) {
-                if ( numbers[i][0] > 0 ){
+                if ( numbers[i][0] >= 0 ){
                     System.out.println(numbers[i][0]+" "+numbers[i][1]);
                 }
             }
