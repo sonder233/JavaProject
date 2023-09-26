@@ -9,5 +9,6 @@
         <language minSize="67" name="Java" />
       </Languages>
     </inspection_tool>
+    <inspection_tool class="TransientFieldNotInitialized" enabled="true" level="WARNING" enabled_by_default="true" />
   </profile>
 </component>
